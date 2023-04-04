@@ -35,10 +35,10 @@
  * @swagger
  * /boards:
  *   post:
- *      summary: 게시글 등록하기
- *      respones:
- *          200:
- *              description: 성공
+ *     summary: 게시글 등록하기 
+ *     responses:
+ *       200:
+ *         description: 성공
  * 
  * 
  * 
