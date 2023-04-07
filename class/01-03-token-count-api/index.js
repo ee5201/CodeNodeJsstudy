@@ -30,4 +30,4 @@ function CreateTokenofPhone(myphone) {
   
 }
 
-CreateTokenofPhone("01012345678")
+CreateTokenofPhone("0101234567")
