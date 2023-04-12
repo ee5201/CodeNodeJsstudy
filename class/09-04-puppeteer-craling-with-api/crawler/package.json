@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "mongoose": "^7.0.3",
+    "puppeteer": "^19.8.5"
+  }
+}
