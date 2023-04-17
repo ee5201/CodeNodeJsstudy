@@ -1,9 +1,9 @@
 import mongoose from "mongoose";
 
 const BoardSchema = new mongoose.Schema({
-  writer: String,
-  title: String,
-  contents: String
+  token: String,
+  phone: String,
+  isAuth: Boolean
 })
 
 export const Board = mongoose.model("Board", BoardSchema)

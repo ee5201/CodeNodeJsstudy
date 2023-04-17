@@ -4,8 +4,7 @@ import cors from 'cors';
 import { CheckValidationEmail, GetWelcomeTemplate, SendWelcomeTemplateToEmail } from "./email.js";
 import mongoose from 'mongoose'
 import { Board } from "./models/board.mode.js";
-import { Stock } from "./models/stock.model.js";
-
+import {Stock} from "./models/stock.model.js"
 
 
 const app = express()
@@ -68,8 +67,8 @@ app.post('/users',(req,res)=>{
     }
 })
 
-app.get("/stocks/",async (req,res) =>{
-  const stocks = await Stock.find()
+app.get('/stocks',async(req,res)=>{
+  const stocks = Stock.find()
   res.send(stocks)
 })
 
