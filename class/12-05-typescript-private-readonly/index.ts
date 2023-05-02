@@ -18,7 +18,7 @@ class Bbb {
   constructor(private mypower) {
     // this.mypower = mypower; // public, private, readonly 중 1개만 포함되면 자동으로 셋팅됨
     //public :어디서든 접근 가능하다. 변경 자유롭다.
-    //private 안에서만 사용가능 
+    //private 안에서만 사용가능
     //readonly 읽기만 가능하다.
   }
 

@@ -1,0 +1,56 @@
+show databases
+; 
+
+use myproject03
+;
+
+show tables
+;
+
+desc product 
+;
+
+select * 
+  from product
+;
+
+
+insert into product(id,name,description,price,isSoldout)
+			values(uuid(),"마우","정말 좋은 마우스 입니다.", 15000, false)
+			;
+			
+insert into product(id,name,description,price,isSoldout)
+			values(uuid(),"노트","최신형 맥", 20000, false)
+			;
+			
+select * 
+ from product_saleslocation
+ ;
+ 
+insert into product_saleslocation (id,address,addressDetail,let,lng,meetingTime)
+			values(uuid(),"구로","구로디지털단","0.0","0.1","2023-05-01")
+;
+
+update product 
+	set name = "키보드"
+	where price = 15000
+	;
+
+
+update product 
+	set productSaleslocationId = "3839a02c-e7c2-11ed-a82b-33c8554e8ac7"
+	where name = "키보드" or name = "마우스"
+	;
+
+  // 추가 기능들 -1
+update product 
+	set productSaleslocationId = "3839a02c-e7c2-11ed-a82b-33c8554e8ac7"
+	where name = "키보드" and price = 15000
+	;
+
+//추가 기능들 -2
+select p.id,name, price, address, addressDetail as "상세주소"
+	from product p, product_saleslocation ps 
+	where p.productSaleslocationId = ps.id 
+	;
+	
